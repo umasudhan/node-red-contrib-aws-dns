@@ -1,2 +1,2 @@
-# node-red-contrib-aws-route53
+# node-red-contrib-aws-dns
 a node-red node to perform dns operations on aws
