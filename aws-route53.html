@@ -47,6 +47,7 @@
 
 <script type="text/x-red" data-help-name="aws-route53">
     <p>A node that updates DNS entries in AWS Route53-hosted zones.</p>
+    <p> Credentials- Enter your AWS access id and secret key in the config. the config is mandated by node-red but can contain blank values</p>
     <p><b>  Methods and arguments</b> Specify method in the node configuration method drop down or in msg.topic and the args as payload. Mandatory args have a *</p>
     <p> zones- no args</p>
     <p> createZone- args is an object containing: name(*), reference(defaults to name), comment</p>
@@ -56,6 +57,4 @@
     <p> delRecord- args is an object containing name(*), zoneId(*), type(*), setIdentifier</p>
     <p> getChange- args is the changeId(*) string</p>
     <p> pollChangeUntilInSync- args is the changeId(*) string</p>
-
-
 </script>

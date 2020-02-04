@@ -10,7 +10,7 @@
     "Route53",
     "dns"
   ],
-  "name": "node-red-contrib-aws-route53",
+  "name": "node-red-contrib-aws-dns",
   "node-red": {
     "nodes": {
       "aws-route53": "aws-route53.js",
@@ -20,18 +20,18 @@
   "author": "uma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/umasudhan/node-red-contrib-aws-route53/issues"
+    "url": "https://github.com/umasudhan/node-red-contrib-aws-dns/issues"
   },
-  "homepage": "https://github.com/umasudhan/node-red-contrib-aws-route53#readme",
+  "homepage": "https://github.com/umasudhan/node-red-contrib-aws-dns#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/umasudhan/node-red-contrib-aws-route53.git"
+    "url": "git+https://github.com/umasudhan/node-red-contrib-aws-dns.git"
   },
   "maintainers": [
     "Uma Sudhan <umasudhan.p@gmail.com>"
   ],
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
