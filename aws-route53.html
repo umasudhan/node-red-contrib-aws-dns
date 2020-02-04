@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    RED.nodes.registerType('aws-route53', {
+        category: 'AWS',
+        color: "#C0DEED",
+        defaults: {
+            name: {value: ""},
+            method: {value: "", required: "true"},
+            creds: {value: "", type: "aws-route53-config"}
+        },
+        inputs: 1,
+        outputs: 2,
+        outputLabels: ["stdout", "stderr"],
+        icon: "aws.png",
+        align: "right",
+        label: function () {
+            return this.name || "aws-route53";
+        },
+        paletteLabel: 'AWS Route53'
+    });
+</script>
+
+<script type="text/x-red" data-template-name="aws-route53">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-globe"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="">
+    </div>
+        <div class="form-row">
+        <label for="node-input-credentials"><i class="fa fa-globe"></i> Credentials</label>
+        <input type="text" id="node-input-creds" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-method"><i class="fa fa-unlock"></i> Method</label>
+        <select id="node-input-method">
+            <option value="zones">zones (list)</option>
+            <option value="createZone">createZone</option>
+            <option value="zoneInfo">zoneInfo</option>
+            <option value="records">records</option>
+            <option value="setRecord">setRecord</option>
+            <option value="delRecord">delRecord</option>
+            <option value="getChange">getChange</option>
+            <option value="pollChangeUntilInSync">pollChangeUntilInSync</option>
+        </select>
+    </div>
+
+
+</script>
+
+<script type="text/x-red" data-help-name="aws-route53">
+    <p>A node that updates DNS entries in AWS Route53-hosted zones.</p>
+    <p><b>  Methods and arguments</b> Specify method in the node configuration method drop down or in msg.topic and the args as payload. Mandatory args have a *</p>
+    <p> zones- no args</p>
+    <p> createZone- args is an object containing: name(*), reference(defaults to name), comment</p>
+    <p> zoneInfo- arg(*) is either the domainName or zoneId </p>
+    <p> records- arg(*) is either the domainName or zoneId </p>
+    <p> setRecord- args is an object containing name(*), zoneId(*), type(*), ttl(*), setIdentifier, weight, one of: values- array of strings OR alias- string </p>
+    <p> delRecord- args is an object containing name(*), zoneId(*), type(*), setIdentifier</p>
+    <p> getChange- args is the changeId(*) string</p>
+    <p> pollChangeUntilInSync- args is the changeId(*) string</p>
+
+
+</script>

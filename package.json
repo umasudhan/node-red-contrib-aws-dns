@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "nice-route53": "*"
+  },
+  "deprecated": false,
+  "description": "a node-red node to perform dns operations on aws",
+  "keywords": [
+    "node-red",
+    "AWS",
+    "Route53",
+    "dns"
+  ],
+  "name": "node-red-contrib-aws-route53",
+  "node-red": {
+    "nodes": {
+      "aws-route53": "aws-route53.js",
+      "aws-route53-config": "aws-route53-config.js"
+    }
+  },
+  "author": "uma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/umasudhan/node-red-contrib-aws-route53/issues"
+  },
+  "homepage": "https://github.com/umasudhan/node-red-contrib-aws-route53#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umasudhan/node-red-contrib-aws-route53.git"
+  },
+  "maintainers": [
+    "Uma Sudhan <umasudhan.p@gmail.com>"
+  ],
+  "version": "0.0.1"
+}
